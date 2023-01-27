@@ -20,7 +20,7 @@ import platform, os, re, sys, json, base64, sqlite3
 if os.name == 'nt':
     import win32crypt, pythoncom
     pythoncom.CoInitialize()
-    from windows_tools import antivirus
+    from windows_tools import antivirus #using netinvent windows_tools found here: https://github.com/netinvent/windows_tools
     try:
         installed_antivirus = antivirus.get_installed_antivirus_software()
     except Exception as e:
